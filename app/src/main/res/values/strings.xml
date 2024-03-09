@@ -15,4 +15,14 @@
 
     <string name="toast_error_products">Error loading products in this category.</string>
 
+    <string name="specifications_text">Especificaciones y Herramientas usadas en esta aplicación:
+        \n\n- Kotlin
+        \n- Retrofit2
+        \n- Glide
+        \n- MVVM
+        \n\nElementos Kotlin:
+        \n\n- RecyclerView, Cardview, DrawerLayout (NavigationView), Toolbar
+        \n- Material3 (Theme Light/Dark):
+    </string>
+
 </resources>

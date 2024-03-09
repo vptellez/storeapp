@@ -8,7 +8,7 @@
         android:title="@string/drawer_title_favorites">
         <menu>
             <item
-                android:id="@+id/application_one"
+                android:id="@+id/item_favorites"
                 android:icon="@drawable/star"
                 android:title="@string/drawer_item_list"
                 android:checkable="true"
@@ -19,7 +19,7 @@
         android:title="@string/drawer_title_application">
         <menu>
             <item
-                android:id="@+id/regulations_theme"
+                android:id="@+id/item_specification"
                 android:title="@string/drawer_item_specification"
                 android:checkable="true"
                 app:showAsAction="ifRoom"/>

@@ -69,16 +69,20 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         }
     }
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        /*when (item.itemId) {
-            R.id.menu_item1 -> {
-
-                return true
+        when (item.itemId) {
+            R.id.item_specification -> {
+                startActivity(Intent(this, SpecificationActivity::class.java))
             }
-            R.id.menu_item2 -> {
-
-                return true
-            }
-        }*/
-        return false
+        }
+        val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
+        drawerLayout.closeDrawer(GravityCompat.START)
+        return true
+    }
+    override fun onBackPressed() {
+        if (drawer!!.isDrawerOpen(GravityCompat.START)) {
+            drawer?.closeDrawer(GravityCompat.START)
+        } else {
+            super.onBackPressed()
+        }
     }
 }
