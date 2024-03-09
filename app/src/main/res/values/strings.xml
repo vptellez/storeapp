@@ -6,6 +6,7 @@
 
     <string name="navigation_toolbar_main">Categories</string>
     <string name="navigation_toolbar_products">Products</string>
+    <string name="navigation_toolbar_detail">Detail</string>
 
     <string name="drawer_title_favorites">Favorites</string>
     <string name="drawer_title_application">Application</string>

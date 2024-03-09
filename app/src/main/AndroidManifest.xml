@@ -35,6 +35,18 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.vptellez.storeapp.view.MainActivity" />
         </activity>
+
+        <activity
+            android:name="com.vptellez.storeapp.view.DetailProductActivity"
+            android:screenOrientation="portrait"
+            android:label=""
+            android:parentActivityName="com.vptellez.storeapp.view.ListProductsActivity"
+            android:hardwareAccelerated="true"
+            tools:ignore="LockedOrientationActivity,MissingClass">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.vptellez.storeapp.view.ListProductsActivity" />
+        </activity>
     </application>
 
 </manifest>

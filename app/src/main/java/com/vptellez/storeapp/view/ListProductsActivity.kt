@@ -31,7 +31,7 @@ class ListProductsActivity : AppCompatActivity(), ProductsViewAdapter.OnProductC
         Objects.requireNonNull(supportActionBar)?.setDisplayHomeAsUpEnabled(true)
         supportActionBar!!.setDisplayShowHomeEnabled(true)
 
-        var toolbarTitle: TextView = findViewById(R.id.toolbar_title_products)
+        val toolbarTitle: TextView = findViewById(R.id.toolbar_title_products)
 
         val layoutManager: RecyclerView.LayoutManager = LinearLayoutManager(this)
         recyclerView = findViewById(R.id.recycler_view_products)
@@ -40,7 +40,6 @@ class ListProductsActivity : AppCompatActivity(), ProductsViewAdapter.OnProductC
         val intent = intent
         if (intent != null) {
             category = intent.getStringExtra(extra_item_product)
-            Log.i("STORE APP: ", "category: $category list")
             if (category != null) {
                 toolbarTitle.text = category
                 productViewModel = ViewModelProvider(this)[MainViewModel::class.java]
@@ -53,7 +52,6 @@ class ListProductsActivity : AppCompatActivity(), ProductsViewAdapter.OnProductC
             loadingError()
         }
     }
-
     private fun observeProducts() {
         productViewModel.listProductsByCategory.observe(this) { products ->
             adapter = ProductsViewAdapter(this)
@@ -61,19 +59,22 @@ class ListProductsActivity : AppCompatActivity(), ProductsViewAdapter.OnProductC
             recyclerView.adapter = adapter
         }
     }
-
     override fun onProductClick(product: Products) {
-        Log.i("STORE APP: ", "product: $product")
+        val bundle = Bundle()
+        bundle.putString("title", product.title)
+        bundle.putString("description", product.description)
+        bundle.putString("category", product.category)
+        bundle.putString("image", product.image)
+        bundle.putDouble("price", product.price)
+        bundle.putDouble("rate", product.rating.rate)
 
-        val intent = Intent(this, ListProductsActivity::class.java)
-        intent.putExtra(ListProductsActivity.extra_item_product, category)
-        this.startActivity(intent)
+        val intent = Intent(this, DetailProductActivity::class.java)
+        intent.putExtras(bundle)
+        startActivity(intent)
     }
-
     companion object {
         var extra_item_product: String? = ""
     }
-
     private fun loadingError() {
         Toast.makeText(this, R.string.toast_error_products, Toast.LENGTH_SHORT).show()
         finish()
