@@ -20,7 +20,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:textColor="@color/white"
+            android:textColor="@color/colorTextWhite"
             android:text="@string/navigation_toolbar_detail"
             android:textStyle="bold"
             android:textIsSelectable="false"
@@ -55,7 +55,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:background="@color/white"
                     android:padding="@dimen/components_list_margin">
 
                     <ImageView
