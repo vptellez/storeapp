@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="components_elevation">6dp</dimen>
+    <dimen name="components_list_margin">16dp</dimen>
+    <dimen name="components_card_radius">8dp</dimen>
+    <dimen name="components_card_margin">6dp</dimen>
+    <dimen name="components_card_image">24dp</dimen>
+    <dimen name="components_header_margin">14dp</dimen>
+
+    <dimen name="components_textView_size_title">14sp</dimen>
+    <dimen name="components_textView_size_text">12sp</dimen>
+</resources>

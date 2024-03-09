@@ -1,5 +1,2 @@
 package com.vptellez.storeapp.model
-
-data class Categories(
-    val name: String
-)
+data class Categories(val name: String)

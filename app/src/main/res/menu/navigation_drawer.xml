@@ -5,22 +5,22 @@
     tools:context=".view.MainActivity">
     <item
         android:id="@+id/main_item"
-        android:title="Favoritos">
+        android:title="@string/drawer_title_favorites">
         <menu>
             <item
                 android:id="@+id/application_one"
                 android:icon="@drawable/star"
-                android:title="Lista"
+                android:title="@string/drawer_item_list"
                 android:checkable="true"
                 app:showAsAction="ifRoom"/>
         </menu>
     </item>
     <item
-        android:title="Aplicación">
+        android:title="@string/drawer_title_application">
         <menu>
             <item
                 android:id="@+id/regulations_theme"
-                android:title="Especificaciones"
+                android:title="@string/drawer_item_specification"
                 android:checkable="true"
                 app:showAsAction="ifRoom"/>
         </menu>

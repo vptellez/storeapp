@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/components_card_radius"
+    app:cardElevation="@dimen/components_elevation"
+    app:strokeColor="@color/white"
+    app:cardUseCompatPadding="true">
+
+    <ImageView
+        android:id="@+id/list_product_icon"
+        android:src="@mipmap/ic_launcher"
+        android:contentDescription="Icon"
+        android:layout_gravity="end"
+        android:layout_width="@dimen/components_card_image"
+        android:layout_height="@dimen/components_card_image"
+        android:layout_margin="14dp" />
+
+    <LinearLayout
+        android:id="@+id/list_product_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="38dp"
+        android:padding="@dimen/components_list_margin">
+
+        <TextView
+            android:id="@+id/list_product_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/components_card_margin"
+            android:ellipsize="end"
+            android:textSize="@dimen/components_textView_size_title"
+            android:textStyle="bold"
+            android:textIsSelectable="false"
+            android:text="Title"/>
+
+        <TextView
+            android:id="@+id/list_product_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:textSize="@dimen/components_textView_size_text"
+            android:textStyle="bold"
+            android:textIsSelectable="false"
+            android:text="Price"/>
+
+        <TextView
+            android:id="@+id/list_product_rating"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:textAlignment="viewEnd"
+            android:textSize="@dimen/components_textView_size_text"
+            android:textIsSelectable="false"
+            android:text="⭐3.9"
+            tools:ignore="RtlCompat" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
