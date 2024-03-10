@@ -34,7 +34,6 @@ class ProductsViewAdapter(private val onProductClickListener: OnProductClickList
         private lateinit var itemProduct: Products
         init {
             itemLineal.setOnClickListener {
-                /*val products = titleTextView.text.toString()*/
                 onProductClickListener.onProductClick(itemProduct)
             }
         }

@@ -17,7 +17,6 @@ class CategoriesAdapter(private val onCategoryClickListener: OnCategoryClickList
     }
     override fun onBindViewHolder(holder: CategoryViewHolder, position: Int) {
         val category = categories[position]
-        /*holder.categoryTextView.text = category.uppercase()*/
         holder.bind(category)
     }
     override fun getItemCount(): Int {

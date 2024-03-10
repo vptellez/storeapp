@@ -13,11 +13,12 @@
     <ImageView
         android:id="@+id/list_product_icon"
         android:src="@mipmap/ic_launcher"
-        android:contentDescription="Icon"
         android:layout_gravity="end"
         android:layout_width="@dimen/components_card_image"
         android:layout_height="@dimen/components_card_image"
-        android:layout_margin="14dp" />
+        android:contentDescription="Logo"
+        android:layout_margin="14dp"
+        tools:ignore="HardcodedText" />
 
     <LinearLayout
         android:id="@+id/list_product_item"
@@ -36,7 +37,7 @@
             android:textSize="@dimen/components_textView_size_title"
             android:textStyle="bold"
             android:textIsSelectable="false"
-            android:text="Title"/>
+            android:text=""/>
 
         <TextView
             android:id="@+id/list_product_price"
@@ -46,7 +47,7 @@
             android:textSize="@dimen/components_textView_size_text"
             android:textStyle="bold"
             android:textIsSelectable="false"
-            android:text="Price"/>
+            android:text=""/>
 
         <TextView
             android:id="@+id/list_product_rating"
@@ -56,7 +57,7 @@
             android:textAlignment="viewEnd"
             android:textSize="@dimen/components_textView_size_text"
             android:textIsSelectable="false"
-            android:text="⭐3.9"
+            android:text=""
             tools:ignore="RtlCompat" />
 
     </LinearLayout>

@@ -20,9 +20,14 @@
         \n- Retrofit2
         \n- Glide
         \n- MVVM
+        \n- Room (SQLite)
         \n\nElementos Kotlin:
-        \n\n- RecyclerView, Cardview, DrawerLayout (NavigationView), Toolbar
-        \n- Material3 (Theme Light/Dark):
+        \n\n- RecyclerView
+        \n- CardView
+        \n- DrawerLayout (NavigationView)
+        \n- Toolbar
+        \n- Material3 (Theme Light/Dark)
+        \n- ScrollView
     </string>
 
 </resources>

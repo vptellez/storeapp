@@ -1,22 +1,17 @@
 package com.vptellez.storeapp.repository
 
-import com.vptellez.storeapp.repository.api.ApiService
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
-class StoreRepository(private val apiService: ApiService) {
-    fun getCategories(callback: (List<String>?) -> Unit) {
-        apiService.getCategoriesApi().enqueue(object : Callback<List<String>> {
-            override fun onResponse(call: Call<List<String>>, response: Response<List<String>>) {
-                if (response.isSuccessful) {
-                    callback(response.body())
-                } else {
-                    callback(null)
-                }
-            }
-            override fun onFailure(call: Call<List<String>>, t: Throwable) {
-                callback(null)
-            }
-        })
+import androidx.lifecycle.LiveData
+import com.vptellez.storeapp.model.CategoryModel
+import com.vptellez.storeapp.repository.dao.DaoCategory
+class StoreRepository(private val categoryDao: DaoCategory) {
+    val allCategories: LiveData<List<CategoryModel>> = categoryDao.getCategories()
+    suspend fun insert(categoryModel: List<CategoryModel>) {
+        categoryDao.insertCategories(categoryModel)
+    }
+    suspend fun delete(categoryModel: CategoryModel) {
+        categoryDao.deleteCategories(categoryModel)
+    }
+    suspend fun update(categoryModel: CategoryModel) {
+        categoryDao.updateCategories(categoryModel.name)
     }
 }

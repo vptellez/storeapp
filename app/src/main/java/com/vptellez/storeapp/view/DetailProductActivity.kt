@@ -42,7 +42,7 @@ class DetailProductActivity : AppCompatActivity() {
                 .load(imageUrl)
                 .apply(
                     RequestOptions()
-                        .placeholder(R.drawable.ic_launcher_background)
+                        .placeholder(R.drawable.ic_launcher_foreground)
                         .error(R.drawable.ic_launcher_foreground)
                 )
                 .into(imageIcon)

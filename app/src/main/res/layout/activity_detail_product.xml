@@ -61,6 +61,7 @@
                         android:id="@+id/detail_icon"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:contentDescription="Article"
                         android:src="@mipmap/ic_launcher"
                         android:scaleType="center"
                         android:layout_marginBottom="@dimen/components_header_margin"
